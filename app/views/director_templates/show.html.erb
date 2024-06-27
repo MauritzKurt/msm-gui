@@ -8,6 +8,41 @@
 
 <hr>
 
+<div>
+  <a href="/delete_director/<%= @the_director.id %>">Delete director</a>
+
+</div>
+
+<hr>
+
+<form action="/modify_director_record/<%= @the_director.id%>" method="post">
+  <div>
+    <label for="name_d_field">Name</label>
+    <input id="name_d_field" type="text" name="the_d_name" value="<%= @the_director.name %>">
+  </div>
+
+  <div>
+    <label for="dob_d_field">Dob</label>
+    <input id="dob_d_field" type="date" name="the_d_dob" value="<%= @the_director.dob %>">
+  </div>
+
+  <div>
+    <label for="bio_d_field">Bio</label>
+    <input id="bio_d_field" type="text" name="the_d_bio" value="<%= @the_director.bio %>">
+  </div>
+
+  <div>
+    <label for="image_d_field">Image</label>
+    <input id="image_d_field" type="text" name="the_d_image" value="<%= @the_director.image %>">
+  </div>
+
+  <button>
+    Update director
+  </button>
+</form>
+
+<hr>
+
 <dl>
   <dt>
     Name
